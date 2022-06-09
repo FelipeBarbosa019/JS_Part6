@@ -1,6 +1,6 @@
 const bombaudio = document.querySelector ('#bombaudio')
 const start = document.querySelector ('#start')
-const aux = document.querySelector ('img')
+const aux = document.querySelector ('#bomb')
 let explosion
 
 function stopBomb () {
@@ -10,8 +10,7 @@ function stopBomb () {
 }
 
 start.addEventListener ('click', function() {
-    explosion = setTimeout(BUM, 3000);
-    console.log(explosion)
+    explosion = setTimeout(BUM, 10000);
     function BUM() {
         bombaudio.play ();
         console.log("BUUUM")
@@ -19,5 +18,5 @@ start.addEventListener ('click', function() {
     }
 
     aux.addEventListener ('click', stopBomb)
-
+    
 })
