@@ -57,8 +57,8 @@ header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
-    height: 3vh;
+    width: 30%;
+    height: 8%;
 }
 
 #start:hover {
