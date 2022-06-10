@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* --------------- Header --------------- */
 header {
     display: flex;
@@ -30,6 +31,7 @@ header a:hover {
 #current {
     color: #7e7e7e;
 }
+
 
 /* --------------- Body --------------- */
 #container {
@@ -93,13 +95,10 @@ h3 {
     font-size: 20px;
 }
 
-
 select {
     background-color: #000000;
     color: #FFFFFF;
 }
-
-
 
 
 /* --------------- Footer --------------- */
