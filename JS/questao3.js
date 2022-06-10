@@ -21,11 +21,15 @@ function regressive () {
 function init () {
     contSec = document.querySelector ('#seconds').value
     contMin = document.querySelector ('#minutes').value
-    aux = setInterval(regressive, 1000);
-    start.style.backgroundColor = "#ff0000";
-    start.textContent = "Desarmar" 
-    console.log(start.textContent)
-    type = "Desarmar"
+    if ((contSec=="Segundos") || (contMin == "Minutos")) {
+        alert ("Insira valores nos campos Minutos e Segundos.")
+    }
+    else {
+        aux = setInterval(regressive, 1000);
+        start.style.backgroundColor = "#ff0000";
+        start.textContent = "Desarmar" 
+        type = "Desarmar"
+    }
 }
 
 function pause () {
@@ -42,10 +46,13 @@ function change () {
         pause()
         return
     }
+
     else {
         init()
         return
     }
 }
 
-start.addEventListener ("click", change)
+    start.addEventListener ("click", change)
+
+
