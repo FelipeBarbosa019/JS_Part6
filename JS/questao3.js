@@ -1,26 +1,38 @@
-const btn = document.querySelector ('#submit')
+const start = document.querySelector ('#btnstart')
+const regressivetext = document.getElementById("regressive");
+let contSec
+let contMin
+let aux
 
-btn.addEventListener ("click", function(e) {
-    e.preventDefault()
-    const produto = document.getElementById ('produtos').value
-    let img = document.querySelector("img");
+function regressive () {
+    regressivetext.textContent = `Restam: ${contMin}:${contSec}`
 
-    switch (produto) {  
-        case "smartphone":
-            img.setAttribute("src","../Imagens/smartphone.png");
-            break;
-        case "notebook":
-            img.setAttribute("src","../Imagens/notebook.png");
-            break;
-        case "tv":
-            img.setAttribute("src","../Imagens/tv.png");
-            break;
-        case "bateria":
-            img.setAttribute("src","../Imagens/bateria.png");
-            break;
-        case "guitarra":
-            img.setAttribute("src","../Imagens/guitarra.png");
-             break;
+    contSec = contSec -1 
+
+    if ((contSec ==-1) && (contMin == 0)){
+        clearInterval (aux)
+        alarm.play ();
     }
-      
+    else if (contSec == -1) {
+         contMin = contMin - 1;
+         contSec = 59
+    }   
+}
+
+start.addEventListener ('click', function() {
+     contSec = document.querySelector ('#seconds').value
+     contMin = document.querySelector ('#minutes').value
+     aux = setInterval(regressive, 1000);
+     document.getElementById("btnstart").style.backgroundColor = "#ff0000";
+     start.textContent = "Desarmar"
 })
+
+
+// start.addEventListener ('click', function() {
+//     document.getElementById("btnstart").style.backgroundColor = "#39b12a";
+//     start.textContent = "Armar"
+//     document.getElementById("btnstart").style.backgroundColor = "#ff0000";
+//     start.textContent = "Desarmar"
+//     clearInterval (aux)
+//     alarm.pause  ();
+// })
