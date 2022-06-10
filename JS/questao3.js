@@ -49,18 +49,3 @@ function change () {
 }
 
 start.addEventListener ("click", change)
-
-
-
-// start.addEventListener ('click', function() {
-//     contSec = document.querySelector ('#seconds').value
-//     contMin = document.querySelector ('#minutes').value
-//     aux = setInterval(regressive, 1000);
-//     document.getElementById("btnstart").style.backgroundColor = "#ff0000";
-//     start.textContent = "Desarmar"
-// })
-
-
-// start.addEventListener ('click', function() {
-//     start.addEventListener ('click', pause)
-// })      

@@ -73,6 +73,10 @@ main{
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 #btnstop {
     background-color: #ff0000;
     color: #FFFFFF;
@@ -98,6 +102,7 @@ h3 {
 select {
     background-color: #000000;
     color: #FFFFFF;
+    width: 8vw;
 }
 
 
